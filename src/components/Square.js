@@ -1,8 +1,14 @@
 import React from "react";
 
-function Square() {
+function Square(props) {
   return (
-    <div className="square-wrapper btn btn-dark">{/* <span>x</span> */}</div>
+    <div
+      style={props.style}
+      className="square-wrapper"
+      onMouseEnter={props.handleMouseEnter}
+    >
+      {/* <span>x</span> */}
+    </div>
   );
 }
 
