@@ -1,37 +1,25 @@
 import React from "react";
 import { nanoid } from "nanoid";
 import Navbar from "./components/Navbar.js";
+import Settings from "./components/Settings.js";
 import Square from "./components/Square.js";
 
 function App() {
   const [gameBoard, setGameBoard] = React.useState(
     Array.from({ length: 16 }, createSquare)
   );
-  // const [gameBoard, setGameBoard] = React.useState(startBoard);
-
-  // const [gameBoard, setGameBoard] = React.useState(Array.from({ length: 6 }));
-
-  // const [squareColor, setSquareColor] = React.useState("");
-
-  // const styles = { background: squareColor };
+  const [selection, setSelection] = React.useState("");
+  console.log(selection);
 
   const boardElements = gameBoard.map((square) => (
     <Square
-      // style={styles}
-      // handleMouseEnter={() => setSquareColor("green")}
+      key={square.id}
       isHeld={square.isHeld}
       handleMouseEnter={() => mouseOver(square.id)}
-      // handleMouseEnter={mouseOver}
+      choiceSelection={selection}
+      // handleSelection={setSelection}
     />
   ));
-
-  function startBoard() {
-    let testArr = [];
-    for (let i = 0; i < 10; i++) {
-      testArr.push(createSquare);
-    }
-    return testArr;
-  }
 
   function createSquare() {
     return {
@@ -40,13 +28,9 @@ function App() {
     };
   }
 
-  function handleChange(event) {
+  function setGrid(event) {
     setGameBoard(Array.from({ length: event.target.value }, createSquare));
   }
-
-  // function handleChange(event) {
-  //   setGameBoard(Array.from({ length: event.target.value }));
-  // }
 
   function mouseOver(id) {
     setGameBoard((oldDice) =>
@@ -59,18 +43,8 @@ function App() {
   return (
     <main>
       <Navbar />
-      <div className="">
-        <div className="input-container container">
-          <input
-            className=""
-            placeholder="Input number of blocks"
-            onChange={handleChange}
-            type="text"
-            name="blockNumber"
-          />
-        </div>
-        <div className="board-elements-wrapper container">{boardElements}</div>
-      </div>
+      <Settings handleChange={setGrid} handleSelection={setSelection} />
+      <div className="board-elements-wrapper container">{boardElements}</div>
     </main>
   );
 }
