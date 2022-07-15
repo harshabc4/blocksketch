@@ -4,7 +4,8 @@ import Navbar from "./components/Navbar.js";
 import Square from "./components/Square.js";
 
 function App() {
-  const [gameBoard, setGameBoard] = React.useState(Array.from({ length: 6 }));
+  const [gameBoard, setGameBoard] = React.useState(startBoard);
+  // const [gameBoard, setGameBoard] = React.useState(Array.from({ length: 6 }));
 
   const [squareColor, setSquareColor] = React.useState("");
 
@@ -12,16 +13,34 @@ function App() {
 
   const boardElements = gameBoard.map((square) => (
     <Square
-      id={nanoid}
       style={styles}
       handleMouseEnter={() => setSquareColor("green")}
       // handleMouseEnter={mouseOver}
     />
   ));
 
-  function handleChange(event) {
-    setGameBoard(Array.from({ length: event.target.value }));
+  function startBoard() {
+    let testArr = [];
+    for (let i = 0; i < 10; i++) {
+      testArr.push(createSquare);
+    }
+    return testArr;
   }
+
+  function createSquare() {
+    return {
+      id: nanoid(),
+      isHeld: false,
+    };
+  }
+
+  function handleChange(event) {
+    setGameBoard(Array.from({ length: event.target.value }, createSquare));
+  }
+
+  // function handleChange(event) {
+  //   setGameBoard(Array.from({ length: event.target.value }));
+  // }
 
   // function mouseOver(id) {
   //   setSquareColor((oldDice) =>
