@@ -1,3 +1,44 @@
-body {
-    background: green;
+.btn {
+    border-radius: 0px;
+    border: 1px solid white;
+}
+
+main {
+    // display: flex;
+}
+
+input {
+    margin: 0 auto;
+    text-align: center;
+   
+}
+
+.input-container {
+    width: 50%;
+    text-align: center;
+}
+
+.board-elements-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 50%;
+    flex-wrap: wrap;
+    width: height;
+    border: solid 1px black;
+    padding: 1rem;
+}
+
+.square-wrapper {
+    display: block;
+    height: 20px;
+    width: 20px;
+    // position: relative;
+    // width: 5%;
+    // height: 0;
+    // padding-bottom: 5%;
+}
+
+.white {
+    background: black;
 }
