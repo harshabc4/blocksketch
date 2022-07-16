@@ -17,7 +17,6 @@ function App() {
       isHeld={square.isHeld}
       handleMouseEnter={() => mouseOver(square.id)}
       choiceSelection={selection}
-      // handleSelection={setSelection}
     />
   ));
 

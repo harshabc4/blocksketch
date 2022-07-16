@@ -15,13 +15,9 @@ function Settings(props) {
           name="blockNumber"
         />
         <select
-          //   value={selection}
           onChange={(event) => {
-            // console.log(event.target.value);
             return props.handleSelection(event.target.value);
           }}
-          //   onChange={(event) => props.handleSelection(event.target.value)}
-          //   onChange={(event) => setSelection(event.target.value)}
         >
           <option defaultValue="">--Choose--</option>
           <option value="click">Click</option>
