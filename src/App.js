@@ -28,7 +28,14 @@ function App() {
   }
 
   function setGrid(event) {
-    setGameBoard(Array.from({ length: event.target.value }, createSquare));
+    let boardLength = event.target.value;
+    if (boardLength > 4000) {
+      boardLength = 4000;
+      alert(
+        "Please input a number less than or equal to 4000 for performance concerns.  4000 is being displayed now."
+      );
+    }
+    setGameBoard(Array.from({ length: boardLength }, createSquare));
   }
 
   function mouseOver(id) {
