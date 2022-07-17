@@ -6,9 +6,7 @@ function Navbar() {
       <nav className="navbar bg-primary">
         <div className="container">
           <h1>BlockSketch</h1>
-          <ul>
-            <li>asdf</li>
-          </ul>
+          <h2>Pixel creations at your fingertips</h2>
         </div>
       </nav>
     </header>

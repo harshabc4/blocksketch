@@ -12,19 +12,32 @@ h1 {
 }
 
 input {
+  color: white;
   margin: 0 auto;
   text-align: center;
+  letter-spacing: 0.1rem;
 }
 
 .input-container {
+  display: flex;
+  justify-content: center;
   width: 50%;
   text-align: center;
+  margin-top: 1rem;
+}
+
+.input-container * {
+  margin: 0 1rem;
+}
+
+select {
+  max-width: 8rem;
 }
 
 .board-elements-wrapper {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: 1rem auto;
   max-width: 65%;
   flex-wrap: wrap;
   width: height;
@@ -45,6 +58,7 @@ footer {
   margin-top: 2rem;
   display: flex;
   width: 100%;
+  justify-content: center;
 }
 
 footer a {
@@ -52,5 +66,5 @@ footer a {
 }
 
 footer a:hover {
-  color: #0d6efd;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

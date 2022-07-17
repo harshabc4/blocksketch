@@ -51,7 +51,7 @@ function App() {
 
   return (
     <main>
-      <div className="content-wrapper flex-shrink-0">
+      <div className="content-wrapper">
         <Navbar />
         <Settings handleChange={setGrid} handleSelection={setSelection} />
         <div className="board-elements-wrapper container">{boardElements}</div>
