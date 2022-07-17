@@ -10,7 +10,6 @@ function App() {
     Array.from({ length: 16 }, createSquare)
   );
   const [selection, setSelection] = React.useState("");
-  // console.log(selection);
 
   const boardElements = gameBoard.map((square) => (
     <Square
