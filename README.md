@@ -4,8 +4,7 @@
 A web application for creating amazing works of pixel art or just decompressing and relaxing.
 
 
-<img src=![blocksketch](https://user-images.githubusercontent.com/97787737/179405045-04e3af8f-525a-447c-874e-8f6861c4066e.png)
->
+<img src=https://user-images.githubusercontent.com/97787737/179405045-04e3af8f-525a-447c-874e-8f6861c4066e.png>
 
 
 ## How It's Made:
