@@ -9,7 +9,7 @@ function App() {
     Array.from({ length: 16 }, createSquare)
   );
   const [selection, setSelection] = React.useState("");
-  console.log(selection);
+  // console.log(selection);
 
   const boardElements = gameBoard.map((square) => (
     <Square
@@ -32,9 +32,11 @@ function App() {
   }
 
   function mouseOver(id) {
-    setGameBoard((oldDice) =>
-      oldDice.map((die) => {
-        return die.id === id ? { ...die, isHeld: !die.isHeld } : die;
+    setGameBoard((squareArr) =>
+      squareArr.map((square) => {
+        return square.id === id
+          ? { ...square, isHeld: !square.isHeld }
+          : square;
       })
     );
   }
