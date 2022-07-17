@@ -2,7 +2,7 @@ import React from "react";
 
 function Square(props) {
   const styles = {
-    backgroundColor: props.isHeld ? "#0d6efd" : "orange",
+    backgroundColor: props.isHeld ? "#c0c0c0" : "#0d6efd",
   };
   return (
     <div

@@ -3,6 +3,7 @@ import { nanoid } from "nanoid";
 import Navbar from "./components/Navbar.js";
 import Settings from "./components/Settings.js";
 import Square from "./components/Square.js";
+import Footer from "./components/Footer.js";
 
 function App() {
   const [gameBoard, setGameBoard] = React.useState(
@@ -50,9 +51,12 @@ function App() {
 
   return (
     <main>
-      <Navbar />
-      <Settings handleChange={setGrid} handleSelection={setSelection} />
-      <div className="board-elements-wrapper container">{boardElements}</div>
+      <div className="content-wrapper flex-shrink-0">
+        <Navbar />
+        <Settings handleChange={setGrid} handleSelection={setSelection} />
+        <div className="board-elements-wrapper container">{boardElements}</div>
+      </div>
+      <Footer />
     </main>
   );
 }

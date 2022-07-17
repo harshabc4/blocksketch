@@ -1,3 +1,16 @@
+body {
+  background: #c0c0c0;
+  font-family: "Advent Pro", sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.content-wrapper {
+  min-height: calc(100vh - 88px);
+}
+
 input {
   margin: 0 auto;
   text-align: center;
@@ -12,7 +25,7 @@ input {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: 50%;
+  max-width: 65%;
   flex-wrap: wrap;
   width: height;
   border: solid 1px black;
@@ -28,6 +41,16 @@ input {
   width: 20px;
 }
 
-.white {
-  background: black;
+footer {
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+}
+
+footer a {
+  color: #c0c0c0;
+}
+
+footer a:hover {
+  color: #0d6efd;
 }/*# sourceMappingURL=style.css.map */
